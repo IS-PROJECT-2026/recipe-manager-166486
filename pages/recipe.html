@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recipe | Recipe Manager</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container nav-container">
+
+            <a href="../index.html" class="logo">
+                Recipe Manager
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#recipes">Recipes</a>
+                <a href="../index.html#categories">Categories</a>
+                <a href="../index.html#about">About</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="recipe-details">
+            <div class="container">
+
+                <a href="../index.html#recipes" class="back-link">
+                    ← Back to Recipes
+                </a>
+
+                <div id="recipe-details-content">
+                    <!-- JavaScript inserts recipe here -->
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Discover. Cook. Enjoy.</p>
+        </div>
+    </footer>
+
+    <script src="../data/recipes.js"></script>
+    <script src="../js/recipe.js"></script>
+
+</body>
+</html>

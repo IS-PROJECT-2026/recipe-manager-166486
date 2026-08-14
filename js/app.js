@@ -14,16 +14,16 @@ function createRecipeCard(recipe) {
             <h3>${recipe.name}</h3>
 
             <p>
-                ${recipe.description}
+                ${recipe.description || ""}
             </p>
 
             <div class="recipe-card-footer">
                 <span class="recipe-time">
-                    ${recipe.time} minutes
+                    ${recipe.cookingTime} minutes
                 </span>
 
                 <a
-                    href="${recipe.link}"
+                    href="pages/recipe.html?id=${recipe.id}"
                     class="recipe-link"
                 >
                     View Recipe
@@ -35,37 +35,9 @@ function createRecipeCard(recipe) {
     return article;
 }
 
-const sampleRecipes = [
-    {
-        name: "Fluffy Pancakes",
-        category: "Breakfast",
-        time: 20,
-        image: "https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=800&q=80",
-        description: "Light and fluffy pancakes perfect for a relaxed breakfast.",
-        link: "pages/recipe.html"
-    },
-    {
-        name: "Creamy Chicken Pasta",
-        category: "Lunch",
-        time: 35,
-        image: "https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?auto=format&fit=crop&w=800&q=80",
-        description: "A comforting pasta dish with tender chicken and a creamy sauce.",
-        link: "pages/recipe.html"
-    },
-    {
-        name: "Grilled Beef Bowl",
-        category: "Dinner",
-        time: 40,
-        image: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80",
-        description: "A satisfying bowl combining grilled beef with fresh vegetables.",
-        link: "pages/recipe.html"
-    }
-];
-
-
 const recipeGrid = document.getElementById("recipe-grid");
 
-sampleRecipes.forEach(function (recipe) {
+recipes.forEach(function (recipe) {
     const recipeCard = createRecipeCard(recipe);
 
     recipeGrid.appendChild(recipeCard);

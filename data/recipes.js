@@ -153,7 +153,7 @@ const recipes = [
     {
         id: "vegetable-stir-fry",
         name: "Vegetable Stir-Fry",
-        image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80",
+        image: "https://images.unsplash.com/photo-1564834724105-918b73d1b9e0?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         category: "Vegetarian",
         ingredients: [
             "1 bell pepper",
@@ -302,7 +302,7 @@ const recipes = [
     {
         id: "chicken-curry",
         name: "Chicken Curry",
-        image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+        image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=1371&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         category: "Dinner",
         ingredients: [
             "500g chicken",
@@ -328,7 +328,7 @@ const recipes = [
     {
         id: "banana-bread",
         name: "Banana Bread",
-        image: "https://images.unsplash.com/photo-1606101273945-e9eba5d9b3c3?auto=format&fit=crop&w=800&q=80",
+        image: "https://images.unsplash.com/photo-1569762404472-026308ba6b64?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         category: "Dessert",
         ingredients: [
             "3 ripe bananas",
@@ -403,5 +403,3 @@ const recipes = [
         servings: 3
     }
 ];
-
-export default recipes;
