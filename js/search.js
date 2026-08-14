@@ -1,13 +1,9 @@
 const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("search-input");
+const categoryFilter = document.getElementById("category-filter");
+
 const searchResults = document.getElementById("search-results");
 const noResults = document.getElementById("no-results");
-
-if (typeof recipes === "undefined") {
-    noResults.textContent = "Recipe data failed to load.";
-    noResults.style.display = "block";
-    throw new Error("recipes is undefined. Ensure data/recipes.js is loaded before search.js.");
-}
 
 
 function displayRecipes(recipeList) {
@@ -63,22 +59,36 @@ function displayRecipes(recipeList) {
 }
 
 
+function filterRecipes() {
+
+    const searchTerm = searchInput.value.trim().toLowerCase();
+    const selectedCategory = categoryFilter.value;
+
+    const filteredRecipes = recipes.filter(function (recipe) {
+
+        const matchesSearch =
+            recipe.name.toLowerCase().includes(searchTerm);
+
+        const matchesCategory =
+            selectedCategory === "all" ||
+            recipe.category === selectedCategory;
+
+        return matchesSearch && matchesCategory;
+    });
+
+    displayRecipes(filteredRecipes);
+}
+
+
 searchForm.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
-    const searchTerm = searchInput.value.trim().toLowerCase();
-
-    const matchingRecipes = recipes.filter(function (recipe) {
-
-        return (
-            recipe.name.toLowerCase().includes(searchTerm) ||
-            recipe.category.toLowerCase().includes(searchTerm)
-        );
-
-    });
-
-    displayRecipes(matchingRecipes);
+    filterRecipes();
 });
 
-displayRecipes(recipes);
+
+categoryFilter.addEventListener("change", function () {
+
+    filterRecipes();
+});

@@ -410,6 +410,25 @@ a {
     color: #666;
 }
 
+.filter-controls {
+    margin-bottom: 20px;
+}
+
+.filter-controls label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.filter-controls select {
+    padding: 12px 16px;
+
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    font-size: 1rem;
+}
+
 /* Basic responsive behaviour*/
 
 @media (max-width: 800px) {
