@@ -1,9 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const recipeId = params.get("id");
 
-const recipe = recipes.find(function (recipe) {
-    return recipe.id === recipeId;
-});
+const recipe = getRecipeById(recipeId);
 
 const container = document.getElementById("recipe-details-content");
 
