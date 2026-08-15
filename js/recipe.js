@@ -49,6 +49,28 @@ if (!recipe) {
 
                 </div>
 
+                <div class="recipe-rating">
+
+                    <h2>Rate this recipe</h2>
+
+                    <div
+                        id="rating-stars"
+                        class="rating-stars"
+                        aria-label="Recipe rating"
+                    >
+                        <button type="button" data-rating="1">★</button>
+                        <button type="button" data-rating="2">★</button>
+                        <button type="button" data-rating="3">★</button>
+                        <button type="button" data-rating="4">★</button>
+                        <button type="button" data-rating="5">★</button>
+                    </div>
+
+                    <p id="rating-status">
+                        Not rated yet
+                    </p>
+
+                </div>
+
                 <h2>Ingredients</h2>
 
                 <ul class="ingredients-list">
@@ -65,7 +87,11 @@ if (!recipe) {
                     }).join("")}
                 </ol>
 
-                <button id="favorite-button" class="favorite-button" type="button">
+                <button
+                    id="favorite-button"
+                    class="favorite-button"
+                    type="button"
+                >
                     Add to Favorites
                 </button>
 
@@ -73,6 +99,7 @@ if (!recipe) {
                     customRecipe
                         ? `
                             <div class="recipe-management-actions">
+
                                 <a
                                     href="edit-recipe.html?id=${recipe.id}"
                                     class="hero-button"
@@ -87,6 +114,7 @@ if (!recipe) {
                                 >
                                     Delete Recipe
                                 </button>
+
                             </div>
                         `
                         : ""
@@ -97,9 +125,14 @@ if (!recipe) {
         </div>
     `;
 
-    const favoriteButton = document.getElementById("favorite-button");
+
+    /* Favorites */
+
+    const favoriteButton =
+        document.getElementById("favorite-button");
 
     function updateFavoriteButton() {
+
         if (isFavorite(recipe.id)) {
             favoriteButton.textContent = "Remove from Favorites";
         } else {
@@ -108,12 +141,75 @@ if (!recipe) {
     }
 
     favoriteButton.addEventListener("click", function () {
+
         toggleFavorite(recipe.id);
+
         updateFavoriteButton();
     });
 
     updateFavoriteButton();
 
+
+    /* Ratings */
+
+    const ratingStars =
+        document.querySelectorAll("#rating-stars button");
+
+    const ratingStatus =
+        document.getElementById("rating-status");
+
+    const savedRatings =
+        JSON.parse(localStorage.getItem("recipeRatings")) || {};
+
+    const savedRating = savedRatings[recipe.id] || 0;
+
+
+    function updateRatingDisplay(rating) {
+
+        ratingStars.forEach(function (star) {
+
+            const starRating = Number(
+                star.dataset.rating
+            );
+
+            if (starRating <= rating) {
+                star.classList.add("selected");
+            } else {
+                star.classList.remove("selected");
+            }
+        });
+
+        if (rating === 0) {
+            ratingStatus.textContent = "Not rated yet";
+        } else {
+            ratingStatus.textContent =
+                "Your rating: " + rating + "/5";
+        }
+    }
+
+
+    ratingStars.forEach(function (star) {
+
+        star.addEventListener("click", function () {
+
+            const rating =
+                Number(star.dataset.rating);
+
+            savedRatings[recipe.id] = rating;
+
+            localStorage.setItem(
+                "recipeRatings",
+                JSON.stringify(savedRatings)
+            );
+
+            updateRatingDisplay(rating);
+        });
+    });
+
+    updateRatingDisplay(savedRating);
+
+
+    /* Delete */
 
     if (customRecipe) {
 
@@ -130,11 +226,12 @@ if (!recipe) {
                 return;
             }
 
-            const updatedRecipes = getCustomRecipes().filter(
-                function (customRecipe) {
-                    return customRecipe.id !== recipe.id;
-                }
-            );
+            const updatedRecipes =
+                getCustomRecipes().filter(
+                    function (customRecipe) {
+                        return customRecipe.id !== recipe.id;
+                    }
+                );
 
             localStorage.setItem(
                 CUSTOM_RECIPES_KEY,
