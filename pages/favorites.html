@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Recipe | Recipe Manager</title>
+    <title>Favorite Recipes | Recipe Manager</title>
 
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -32,16 +32,21 @@
 
     <main>
 
-        <section class="recipe-details">
+        <section class="featured-recipes">
             <div class="container">
 
-                <a href="../index.html#recipes" class="back-link">
-                    ← Back to Recipes
-                </a>
-
-                <div id="recipe-details-content">
-                    <!-- JavaScript inserts recipe here -->
+                <div class="section-heading">
+                    <p class="section-label">MY RECIPES</p>
+                    <h1>Favorite Recipes</h1>
+                    <p>Your saved recipes in one place.</p>
                 </div>
+
+                <div id="favorites-grid" class="recipe-grid">
+                </div>
+
+                <p id="no-favorites" class="no-results">
+                    You haven't added any favorite recipes yet.
+                </p>
 
             </div>
         </section>
@@ -56,7 +61,6 @@
 
     <script src="../data/recipes.js"></script>
     <script src="../js/favorites.js"></script>
-    <script src="../js/recipe.js"></script>
-
+    <script src="../js/favorites-page.js"></script>
 </body>
 </html>

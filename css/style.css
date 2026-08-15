@@ -429,6 +429,24 @@ a {
     font-size: 1rem;
 }
 
+.favorite-button {
+    margin-bottom: 30px;
+    padding: 13px 20px;
+
+    border: 1px solid #222;
+    border-radius: 4px;
+
+    background-color: #222;
+    color: #fff;
+
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.favorite-button:hover {
+    opacity: 0.85;
+}
+
 /* Basic responsive behaviour*/
 
 @media (max-width: 800px) {
