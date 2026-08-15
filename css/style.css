@@ -481,6 +481,31 @@ a {
     resize: vertical;
 }
 
+.input-invalid {
+    border-color: #b42318;
+    background-color: #fff5f3;
+}
+
+.field-error {
+    display: none;
+    font-size: 0.9rem;
+    color: #b42318;
+}
+
+.form-status {
+    display: none;
+    margin-top: 14px;
+    font-weight: 600;
+}
+
+.form-status-error {
+    color: #b42318;
+}
+
+.form-status-success {
+    color: #027a48;
+}
+
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
