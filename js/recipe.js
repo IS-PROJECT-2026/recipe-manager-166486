@@ -62,9 +62,29 @@ if (!recipe) {
                         return `<li>${instruction}</li>`;
                     }).join("")}
                 </ol>
-
+                <button id="favorite-button"class="favorite-button" type="button">
+                    Add to Favorites
+                </button>
             </div>
 
         </div>
     `;
+    const favoriteButton = document.getElementById("favorite-button");
+    function updateFavoriteButton() {
+
+        if (isFavorite(recipe.id)) {
+            favoriteButton.textContent = "Remove from Favorites";
+        } else {
+            favoriteButton.textContent = "Add to Favorites";
+        }
+    }
+
+    favoriteButton.addEventListener("click", function () {
+
+        toggleFavorite(recipe.id);
+
+        updateFavoriteButton();
+    });
+
+    updateFavoriteButton();
 }
