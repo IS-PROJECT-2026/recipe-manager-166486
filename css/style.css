@@ -512,6 +512,27 @@ a {
     gap: 20px;
 }
 
+.recipe-management-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.delete-button {
+    padding: 13px 24px;
+    border: 1px solid #222;
+    background-color: #fff;
+    color: #222;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #222;
+    color: #fff;
+}
+
 @media (max-width: 600px) {
     .form-row {
         grid-template-columns: 1fr;
