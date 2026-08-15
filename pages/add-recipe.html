@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Recipe | Recipe Manager</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container nav-container">
+
+            <a href="../index.html" class="logo">
+                Recipe Manager
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#recipes">Recipes</a>
+                <a href="../index.html#categories">Categories</a>
+                <a href="../index.html#about">About</a>
+                <a href="../pages/search.html">Search</a>
+                <a href="../pages/favorites.html">Favorites</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="add-recipe">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">CREATE</p>
+                    <h1>Add a Recipe</h1>
+                    <p>Add your own recipe to Recipe Manager.</p>
+                </div>
+
+                <form id="recipe-form" class="recipe-form">
+
+                    <div class="form-group">
+                        <label for="name">Recipe Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category" required>
+                            <option value="">Select a category</option>
+                            <option value="Breakfast">Breakfast</option>
+                            <option value="Lunch">Lunch</option>
+                            <option value="Dinner">Dinner</option>
+                            <option value="Dessert">Dessert</option>
+                            <option value="Snack">Snack</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="image">Image URL</label>
+                        <input type="url" id="image" name="image" required>
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="cookingTime">Cooking Time (minutes)</label>
+                            <input
+                                type="number"
+                                id="cookingTime"
+                                name="cookingTime"
+                                min="1"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="servings">Servings</label>
+                            <input
+                                type="number"
+                                id="servings"
+                                name="servings"
+                                min="1"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ingredients">Ingredients</label>
+                        <textarea
+                            id="ingredients"
+                            name="ingredients"
+                            rows="6"
+                            placeholder="Enter one ingredient per line"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="instructions">Instructions</label>
+                        <textarea
+                            id="instructions"
+                            name="instructions"
+                            rows="8"
+                            placeholder="Enter one instruction per line"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="hero-button">
+                        Add Recipe
+                    </button>
+
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Discover. Cook. Enjoy.</p>
+        </div>
+    </footer>
+
+    <script src="../data/recipes.js"></script>
+    <script src="../js/recipes-store.js"></script>
+    <script src="../js/add-recipe.js"></script>
+
+</body>
+</html>
