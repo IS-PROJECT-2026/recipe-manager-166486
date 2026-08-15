@@ -37,7 +37,9 @@ function createRecipeCard(recipe) {
 
 const recipeGrid = document.getElementById("recipe-grid");
 
-recipes.forEach(function (recipe) {
+const allRecipes = getAllRecipes();
+
+allRecipes.forEach(function (recipe) {
     const recipeCard = createRecipeCard(recipe);
 
     recipeGrid.appendChild(recipeCard);

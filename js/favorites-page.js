@@ -30,8 +30,9 @@ function createFavoriteCard(recipe) {
 }
 
 const favoriteIds = getFavorites();
+const allRecipes = getAllRecipes();
 
-const favoriteRecipes = recipes.filter(function (recipe) {
+const favoriteRecipes = allRecipes.filter(function (recipe) {
     return favoriteIds.includes(recipe.id);
 });
 

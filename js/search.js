@@ -63,8 +63,9 @@ function filterRecipes() {
 
     const searchTerm = searchInput.value.trim().toLowerCase();
     const selectedCategory = categoryFilter.value;
+    const allRecipes = getAllRecipes();
 
-    const filteredRecipes = recipes.filter(function (recipe) {
+    const filteredRecipes = allRecipes.filter(function (recipe) {
 
         const matchesSearch =
             recipe.name.toLowerCase().includes(searchTerm);
@@ -92,3 +93,5 @@ categoryFilter.addEventListener("change", function () {
 
     filterRecipes();
 });
+
+displayRecipes(getAllRecipes());
