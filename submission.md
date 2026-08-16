@@ -59,30 +59,31 @@ Demonstrate your workflow mechanics by embedding your screenshots below.
 ### A. Milestones and Issues
 *Provide a screenshot showing your active milestone(s) and the granular tracking issues linked directly to them.*
 
-[PASTE YOUR MILESTONE SCREENSHOT DIRECTLY HERE]
+<img width="1534" height="420" alt="Screenshot 2026-08-16 230954" src="https://github.com/user-attachments/assets/6c371f51-0f4a-44ee-a1a1-aae4f5ed6119" />
+
 
 * **Caption:** This was the final milestone that involved polishing the website, deployment and documentation. The open issue involves creating the submission.md doc while the closed issues were bug fixes, deployment on git-pages and creating the readme doc.
 
 ### B. Project Board
 *Provide a screenshot of your GitHub Project Board with your issues organized dynamically across columns (To Do, In Progress, Done).*
 
-[PASTE YOUR PROJECT BOARD SCREENSHOT DIRECTLY HERE]
+<img width="1919" height="879" alt="Screenshot 2026-08-15 135656" src="https://github.com/user-attachments/assets/59a65c7e-fafe-43eb-852c-55ecd968f10a" />
 
 * **Caption:** In this state the project was dealing with the recipe management milestone and the form creation and validation issues were being worked on. The first milestone, recipe foundational feature was completed with Recipe Manager Polishing and Deployment milestone undone.  
 
 ### C. Branching Architecture
 *Provide a screenshot showing your local or remote Git branch list, highlighting your use of conventional, issue-linked naming patterns (e.g., `feat/`, `fix/`, `style/`).*
 
-[PASTE YOUR BRANCHING SCREENSHOT DIRECTLY HERE]
+<img width="1520" height="767" alt="Screenshot 2026-08-16 231806" src="https://github.com/user-attachments/assets/75729eb7-402b-484d-85d7-e6b7cdd1ab63" />
 
 * **Caption:** Each branch was linked to the issue it would fix and was labelled according to the contribution e.g. feat when new functionality is introduced, fix when solving a bug, doc when introducing documentation.
 
 ### D. Pull Requests & Traceability
 *Provide a screenshot of a completed or open Pull Request (PR) on GitHub that clearly shows it is linked to a related development issue.*
 
-[PASTE YOUR PULL REQUEST SCREENSHOT DIRECTLY HERE]
+<img width="929" height="827" alt="Screenshot 2026-08-16 232600" src="https://github.com/user-attachments/assets/30a88011-89de-44ae-9986-ab6677b00cf1" />
 
-* **Caption:** Merged recipe creation form and persistence functionality from the feature branch with with main branch and cloesed the associated issue, #10.
+* **Caption:** Merged recipe creation form and persistence functionality from the feature branch with with main branch and closed the associated issue, #10.
 
 ---
 
@@ -101,21 +102,21 @@ You must engineer **three merge conflicts**, each triggered by a **different cau
 #### Step 1: Generating the Clash
 *Screenshot showing the merge attempt and the conflict warning.*
 
-[PASTE SCREENSHOT OF ATTEMPTED MERGE / TERMINAL WARNING HERE]
+<img width="966" height="691" alt="Screenshot 2026-08-16 194222" src="https://github.com/user-attachments/assets/163ef9ad-59a5-4580-a94c-9362b6a368e3" />
 
 * **Caption:** feat/33-update-hero-copy-a and feat/30-update-hero-copy-b provided alternative headers for the homepage hero section hence the warnigng that the feature branches couldnt be merged automatically
 
 #### Step 2: Inside the Code Editor (Conflict Markers)
 *Screenshot showing the raw, unresolved conflict markers (`<<<<<<< HEAD`, `=======`, `>>>>>>>`) in your editor.*
 
-[PASTE SCREENSHOT OF RAW CONFLICT MARKERS HERE]
+<img width="1902" height="752" alt="Screenshot 2026-08-16 193942" src="https://github.com/user-attachments/assets/fbd8330a-4e01-420c-8738-981053fd4e98" />
 
 * **Caption:** The conflict was caused as github could not automatically merge feat/30-update-hero-copy-b with main branch, I manually chose the feature branch due to it's more refined wording for the hero section
 
 #### Step 3: Resolution & Clean Merge
 *Screenshot of your clean Git history or completed PR showing the conflict was resolved and merged.*
 
-[PASTE SCREENSHOT OF CLEAN RESOLUTION HERE]
+<img width="944" height="686" alt="Screenshot 2026-08-16 194425" src="https://github.com/user-attachments/assets/a0648eba-86bf-458f-be47-5e8ab183d0c1" />
 
 * **Caption:** In the end the merge was successful after manually choosing to accept feat/30-update-hero-copy-b version
 
@@ -127,9 +128,9 @@ You must engineer **three merge conflicts**, each triggered by a **different cau
 
 **Why does this cause trigger a conflict?** One branch modifies a file that has been delted in another branch. Github is unable to automatically merge a file change on a delted file.
 
-[PASTE SCREENSHOT OF CONFLICT MARKERS FOR CONFLICT 2 HERE]
+<img width="1850" height="907" alt="Screenshot 2026-08-16 201523" src="https://github.com/user-attachments/assets/be4ae22e-86dd-48dd-96d7-0ccfe8e79755" />
 
-* **Caption:** refactor/34-merge-favorites-functionality deleted favorites-paga.js after merging it with favorites.js while feat/35-update-favorites-page updated text in favorits-page.js, a file that prepares recipes that have been added to favorties to be displayed together.
+* **Caption:** refactor/34-merge-favorites-functionality deleted favorites-paga.js after merging it with favorites.js while feat/35-update-favorites-page updated text in favorits-page.js, a file that prepares recipes that have been added to favorites to be displayed together.
 
 ---
 
@@ -139,7 +140,7 @@ You must engineer **three merge conflicts**, each triggered by a **different cau
 
 **Why does this cause trigger a conflict?** Both branches add a file with the same name, however the content in them is different and github is unable to automatically selct wich version to keep.
 
-[PASTE SCREENSHOT OF CONFLICT MARKERS FOR CONFLICT 3 HERE]
+<img width="1009" height="664" alt="Screenshot 2026-08-16 203839" src="https://github.com/user-attachments/assets/56529788-739f-421d-b7bd-4c894b818a0d" />
 
 * **Caption:** feat/38-thank-recipe-developers created a page thanking users who contributed to recipes while feat/38-thank-recipe-manager-users thanked all users who support the website through visits and interacting with it.
 
