@@ -20,7 +20,7 @@ function createFavoriteCard(recipe) {
                 <span class="recipe-time">${recipe.cookingTime} minutes</span>
 
                 <a href="recipe.html?id=${recipe.id}" class="recipe-link">
-                    View Recipe
+                    View Recipes
                 </a>
             </div>
         </div>
